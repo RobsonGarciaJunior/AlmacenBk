@@ -1,4 +1,4 @@
-package model.controller.product;
+package com.example.almacen.model.controller.product;
 
 import lombok.Data;
 import lombok.Getter;

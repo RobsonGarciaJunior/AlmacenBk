@@ -2,10 +2,12 @@ package com.example.almacen.service;
 
 import java.util.List;
 
-import model.service.ProductDTO;
+import com.example.almacen.model.service.ProductDTO;
 
 public interface IProductService {
 
-	List<ProductDTO> findAll(Integer userId);
+	List<ProductDTO> findAll();
+
+	Boolean deleteProduct(Integer idProduct);
 	
 }
