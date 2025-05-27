@@ -46,7 +46,17 @@ public class User implements UserDetails {
 		this.email = email;
 	}
 
-    
+    public User(Integer id, String email, String nombre, String apellido, String foto, Boolean habilitado, String tipoUser) {
+		super();
+		this.id = id;
+		this.email = email;
+		this.nombre = nombre;
+		this.apellido = apellido;
+		this.foto = foto;
+		this.habilitado = habilitado;		
+		this.tipoUser = tipoUser;
+	}
+	
     public User(Integer id, String email, String nombre, String apellido, String foto, Boolean habilitado,
 			String password, String tipoUser) {
 		super();

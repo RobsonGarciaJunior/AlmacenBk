@@ -8,9 +8,9 @@ import com.example.almacen.model.persistence.Product;
 
 public interface IProductRepository extends CrudRepository<Product, Integer> {
 
-    @Query(value = "SELECT * FROM Product", nativeQuery = true)
+    @Query(value = "SELECT * FROM Producto", nativeQuery = true)
     Iterable<Product> findAllProducts();
 
-    @Query(value = "SELECT * FROM Product WHERE id = :id", nativeQuery = true)
+    @Query(value = "SELECT * FROM Producto WHERE id = :id", nativeQuery = true)
     Product findProductById(@Param("id") Integer id);
 }

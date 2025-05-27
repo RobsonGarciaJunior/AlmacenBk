@@ -28,7 +28,7 @@ public class ProductController {
 	@GetMapping("findAll")
 	public ResponseEntity<List<ProductGetResponse>> getProducts(Authentication authentication) throws IOException{
 
-		User user = (User) authentication.getPrincipal();
+//		User user = (User) authentication.getPrincipal();
 
 		List <ProductDTO> listProductDTO = productService.findAll();
 		List<ProductGetResponse> response = new ArrayList<ProductGetResponse>(); 
@@ -41,7 +41,7 @@ public class ProductController {
 	}
 	
 	@DeleteMapping("/{id}")
-	public ResponseEntity<Boolean> deleteChatById(@PathVariable("id") Integer idProduct, Authentication authentication){
+	public ResponseEntity<Boolean> deleteProductById(@PathVariable("id") Integer idProduct, Authentication authentication){
 		User user = (User) authentication.getPrincipal();
 //		ChatGetResponse response = new ChatGetResponse();
 		Boolean isDeleted = productService.deleteProduct(idProduct);
